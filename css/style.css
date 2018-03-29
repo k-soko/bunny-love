@@ -37,10 +37,12 @@ body {
 }
 
 h1 {
+  display:inline-block;
   font-size: 48px;
-  padding: 5px;
-  margin: 15px;
+  padding: 10px;
+  margin: 10px 80px;
   font-family: 'Permanent Marker';
+  cursor: default;
 
   text-shadow:
        3px 3px 0 #000,
@@ -48,6 +50,28 @@ h1 {
       1px -1px 0 #000,
       -1px 1px 0 #000,
        1px 1px 0 #000;
+}
+
+h1:hover {
+  animation: squeeze 4s;
+}
+
+@keyframes squeeze {
+  0% {transform: scale(1,1);}
+  25% {
+    transform: scale(1.4,0.8);
+    letter-spacing: 3px;
+  }
+  33% {
+    transform: scale(0.5,1.5);
+    letter-spacing: normal;
+  }
+  35% {transform: scale(0.5,1.5);}
+  43% {transform: scale(1.2,0.9);}
+  48% {transform: scale(0.9,1.1);}
+  53% {transform: scale(1.07,0.97);}
+  58% {transform: scale(1,1);}
+  100% {transform: scale(1,1);}
 }
 
 .text {
